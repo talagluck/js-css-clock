@@ -62,13 +62,23 @@
       background: black;
       position: absolute;
       top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition:all 0.05s;
+      transition-timing-function: cubic-bezier(0, 2.54, 0.93, 1.13);
     }
 
   </style>
 
   <script>
-
-
+    function setDate() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const minutes = now.getMinutes();
+      const hours = now.getHours();
+      console.log(seconds);
+    }
+    setInterval(setDate,1000);
   </script>
 </body>
 </html>
